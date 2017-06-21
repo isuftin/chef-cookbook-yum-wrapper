@@ -1,10 +1,10 @@
 #
-# Cookbook:: wma_yum_wrapper
+# Cookbook:: yum_wrapper
 # Recipe:: add_repositories
 #
 # Description:: Adds YUM repositories to the system
 
-node['wma_yum_wrapper']['repositories']['add'].each do |repo_name, repo_data|
+node['yum_wrapper']['repositories']['add'].each do |repo_name, repo_data|
   yum_repository repo_name do
     baseurl repo_data['baseurl'] unless repo_data['baseurl'].nil?
     cost                    repo_data['cost'] unless repo_data['cost'].nil?

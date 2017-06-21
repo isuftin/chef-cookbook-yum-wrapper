@@ -22,13 +22,13 @@ Requirements
 
 Attributes
 ----------
-- `node['wma_yum_wrapper']['repositories']['add']`: Hash. This property
+- `node['yum_wrapper']['repositories']['add']`: Hash. This property
 is used by the `add_repositories` recipe. This is a hash of repositories
 you wish to add to your system. The key in the repository is the human readable name
 you want your repository configuration to add. The values mimic the [properties](https://docs.chef.io/resource_yum_repository.html#properties)
 that the `yum_repository` Chef resource uses.
 
-- `node['wma_yum_wrapper']['repositories']['delete']`: Array, String. This property
+- `node['yum_wrapper']['repositories']['delete']`: Array, String. This property
 is used by the `delete_repositories` recipe. This is an array of strings that
 represent the human readable name that a repository is configured for in your YUM
 repository manager. For example, if you've added a repository through this cookbook
@@ -38,3 +38,5 @@ this property to delete that repository.
 ### Usage
 
 Simply include the `add_repositories` recipe if you wish to have new YUM repositories added to your system. Alternatively, or in addition to, use the `delete_repositories` recipe.
+
+Check the Attributes section to learn how to configure the repository run.

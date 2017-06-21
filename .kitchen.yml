@@ -24,7 +24,7 @@ suites:
       - recipe[yum_wrapper::add_repositories]
     data_path: './test/files'
     attributes: {
-      "wma_yum_wrapper" : {
+      "yum_wrapper" : {
         "repositories" : {
           "add" : {
               "artifactory-epel-el7" : {
@@ -69,7 +69,7 @@ suites:
       - recipe[yum_wrapper::add_repositories]
     data_path: './test/files'
     attributes: {
-      "wma_yum_wrapper" : {
+      "yum_wrapper" : {
         "repositories" : {
           "add" : {
               "artifactory-epel-el6" : {
